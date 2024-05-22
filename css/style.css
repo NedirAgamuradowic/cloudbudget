@@ -1,0 +1,483 @@
+/* font face */
+@font-face {
+    font-family: 'Roboto';
+    src: 
+		url('../fonts/roboto-Regular.woff2') format('woff2'),
+         url('../fonts/roboto-Regular.woff') format('woff'),
+		 url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Roboto';
+	src: 
+	url('../fonts/roboto-Medium.woff2') format('woff2'),
+	url('../fonts/roboto-Medium.woff') format('woff'),
+	url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: 
+	url('../fonts/roboto-Bold.woff2') format('woff2'),
+	url('../fonts/roboto-Bold.woff') format('woff'),
+	url('../fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+/* color palette */
+:root{
+	--primaryColor:#ed4c5c;
+	--grayBackground:#fafafa;
+	--whiteColor:#fff;
+	--blackColor:#000;
+	--anotherBlack:#101010;
+	--borderRadius:8px;
+	--gradientBackground:linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 62, 27, 0.8) 100%);
+}
+
+
+/* reset css */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ul[class],
+ol[class] {
+  padding: 0;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;  
+}
+ul[class],
+ol[class] {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Typography */
+html{
+	font-size: 10px;
+}
+body{
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	line-height: 1.4;
+	font-size: 1.4rem;
+}
+h1, h2, h3{
+	line-height: 1.1;
+}
+h2, h3 {
+	font-weight: 500;
+}
+h1{
+	font-weight: 700;
+	font-size: 7.2rem;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+
+/* link */
+.link{
+	text-decoration: none;
+	text-transform: capitalize;
+	font-size: 1.4rem;
+	color: var(--primaryColor);
+}
+.link:hover{
+	text-decoration: underline;
+}
+
+/* button */
+.btn{
+	border: none;
+	outline: none;
+	background: transparent;
+	padding: 12px 31px;
+	font-size: 14px;
+	text-decoration:none;
+	text-transform: uppercase;
+	border-radius: var(--borderRadius);
+	cursor: pointer;
+}
+.btn--outline{
+	border: 1px solid var(--whiteColor);
+	color: var(--whiteColor);
+}
+.btn--outline:hover{
+	background: var(--whiteColor);
+	color: var(--primaryColor);
+}
+.btn--white{
+	background: var(--whiteColor);
+	color: var(--primaryColor);
+}
+.btn--white:hover{
+	background: transparent;
+	border: 1px solid var(--whiteColor);
+	color: var(--whiteColor);
+}
+.btn--primary{
+	border: 1px solid var(--primaryColor);
+	background: var(--primaryColor);
+	color: var(--whiteColor);
+}
+.btn--primary:hover{
+	border: 1px solid var(--primaryColor);
+	background: var(--whiteColor);
+	color: var(--primaryColor);
+}
+
+/* input */
+.input{
+	outline: none;
+	border: 1px solid #333333;
+	border-radius: var(--borderRadius);
+	padding: 2rem 3rem;
+	width: 100%;
+	font-size: 1.6rem;
+	margin-bottom: 2.4rem;
+}
+
+/* Content */
+.content__heading{
+	font-weight: 500;
+	line-height: 1.1;
+	margin-bottom: 2rem;
+}
+.content__desc{
+	margin-bottom: 1.2rem;
+}
+
+/* Heading*/
+.heading{
+	font-size: 3.6rem;
+	text-transform: capitalize;
+	text-align: center;
+	margin-bottom: 6.3rem;
+}
+
+/* Box */
+.container{
+	min-width: 320px;
+	max-width: 1110px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.flex{
+	display: flex;
+}
+.flex--between{
+	justify-content: space-between;
+}
+.section{
+	padding: 9.5rem 0;
+}
+.section__content{
+	flex-basis: 42%;
+	align-self: center;
+}
+.section__content .content__heading{
+	font-size: 3.6rem;
+}
+.section__content .content__desc{
+	font-size: 1.4rem;
+}
+
+
+/* header */
+.header{
+	background: url(../img/bg-head.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.header__overlay{
+	padding-top: 5rem;
+	padding-bottom: 18rem;
+	background: var(--gradientBackground);
+}
+
+/* navbar */
+.navbar{
+	justify-content: space-between;
+	align-items: center;
+}
+.menu__list{
+	flex-wrap: wrap;
+}
+.menu__link{
+	padding: 1rem;
+	color: var(--whiteColor);
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+
+/* hero */
+.hero{
+	text-align: center;
+	color: var(--whiteColor);
+	margin-top: 17rem;
+}
+.hero__tagline{
+	width: 54rem;
+	margin: 4rem auto 6rem;
+	font-size: 2.4rem;
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+/* about */
+
+
+/* possibilities */
+.possibilities, .footer{
+	background: var(--grayBackground);
+}
+.possibilities .flex{
+	gap: 1rem;
+}
+.possibilities__item{
+	text-align: center;
+	flex-direction: column;
+	max-width: 35rem;
+	color:var(--anotherBlack);
+}
+.possibilities img{
+	min-height: 250px;
+}
+.possibilities .content{
+	position: relative;
+	margin: -9.5rem 3.5rem 0;
+	padding: 2rem 2rem 1rem 2rem;
+	border-radius: var(--borderRadius);
+	box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+	background: var(--whiteColor);
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.possibilities .content__heading{
+	font-size: 1.8rem;
+}
+.possibilities .content__desc{
+	font-size: 1.2rem;
+}
+
+/* Technology */
+.technology__item{
+	text-align: center;
+	max-width: 20rem;
+	color: var(--anotherBlack);
+}
+.technology__top{
+	color: rgba(16,16,16,0.08);
+	font-weight: 700;
+	font-size: 10rem;
+	margin-bottom: 1rem;
+	position: relative;
+}
+.technology__img{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.technology .content__heading{
+	font-size: 1.125rem;
+}
+
+/* download */
+.download{
+	background: var(--primaryColor);
+	color: var(--whiteColor);
+}
+
+.download .content__desc{
+	opacity: 0.7;
+	margin-bottom: 4rem;
+}
+.download__action{
+	gap: 2.3rem;
+}
+
+/* contact */
+.contact .content__heading{
+	margin-bottom: 5.4rem;
+}
+.contact__form{
+	padding-left: 5rem;
+}
+
+
+/* footer */
+.footer .content__heading{
+	font-size: 1.8rem;
+}
+.footer .address{
+	display: block;
+	text-decoration: none;
+	font-size: 1.2rem;
+	color: var(--anotherBlack);
+}
+.footer .content__desc:last-child{
+	font-size: 1.2rem;
+	margin-top: 4.5rem;
+}
+
+@media screen and (max-width:900px) {
+	.section__content{
+		flex-basis: 65%;
+		margin-right: 2rem;
+	}
+}
+
+@media screen and (max-width:800px) {
+	.header__overlay{
+		padding-top: 2rem;
+	}
+	.navbar{
+		flex-direction: column;
+	}
+	.logo{
+		align-self: flex-start;
+	}
+	.navbar .btn{
+		align-self: flex-end;
+		transform: translateY(-37px);
+	}
+	.menu{
+		order: 3;
+		margin-top: -1rem;
+	}
+	.menu__list{
+		justify-content: center;
+	}
+	.menu__item{
+		margin-bottom: 1.5rem;
+	}
+	.section__content .content__heading{
+		font-size: 3rem;
+	}
+
+}
+
+@media  screen and (max-width:768px) {
+	h1{
+		font-size: 6rem;
+	}
+	
+	.hero__tagline{
+		width: 90%;
+		font-size: 2rem;
+	}
+	.section .flex{
+		flex-direction: column;
+	}
+	.section__content{
+		flex-basis: 100%;
+		margin-right: 0;
+	}
+	.section__content .content__desc{
+		font-size: 1.6rem;
+	}
+	.about__img {
+		order: -1;
+		margin:  0 auto 4rem auto;
+	}
+	.possibilities__item{
+		max-width: 40rem;
+		align-self: center;
+		margin-bottom: 3rem;
+	}
+	.technology .flex{
+		flex-direction: row;
+	}
+	.technology__item{
+		max-width: 16rem;
+	}
+	.download .download__action {
+		flex-direction: row;
+	}
+	.download__img{
+		margin: 4rem auto 0 auto;
+	}
+	.contact__form{
+		margin-top: 4rem;
+		padding-left: 0;
+	}
+	
+}
+
+@media screen and (max-width:600px){
+	h1{
+		font-size: 4rem;
+	}
+	.btn{
+		padding: 10px 20px;
+	}
+	.input{
+		padding: 1.5rem 2.5rem;
+	}
+	.section{
+		padding: 7rem 0;
+	}
+	.header__overlay{
+		padding-bottom: 11rem;
+	}
+	.hero{
+		margin-top: 7rem;
+	}
+	.hero__tagline{
+		font-size: 1.6rem;
+	}
+	.technology .flex{
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.technology__item{
+		align-self: center;
+		max-width: 20rem;
+	}
+	.technology .content__heading{
+		font-size: 2rem;
+	}
+
+}
